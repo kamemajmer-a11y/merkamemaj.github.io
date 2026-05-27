@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Midnight Cravings</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
 </head>
+
 <body>
 
     <header>
@@ -27,37 +28,61 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <p class="tagline">Late night. Big cravings. One click away.</p>
-            <h2>Discover what your mood is craving tonight.</h2>
+            <p class="tagline">Your late-night food companion</p>
+
+            <h2>
+                Discover Your
+                <span>Midnight Cravings</span>
+            </h2>
+
             <p>
-                Midnight Cravings is an interactive food website that recommends
-                snacks, desserts, and comfort meals based on your mood.
+                Explore comfort foods, desserts, snacks, and late-night favorites
+                through a stylish interactive food experience.
             </p>
 
-            <a href="#foods" class="hero-btn">Explore Cravings</a>
+            <div class="hero-buttons">
+                <a href="#foods" class="hero-btn">Explore Cravings</a>
+                <button id="heroRandomBtn" class="outline-btn">Surprise Me</button>
+            </div>
+
+            <p id="heroResult" class="hero-result">
+                Feeling hungry? Let the website choose for you.
+            </p>
         </div>
     </section>
 
-    <section id="foods" class="section">
-        <h2>Popular Cravings</h2>
+    <section id="foods" class="section foods-section">
+        <div class="section-title">
+            <p>Featured picks</p>
+            <h2>Popular Cravings</h2>
+        </div>
 
         <div class="food-grid">
             <div class="food-card" data-message="Pizza never fails. You survived the craving.">
                 <img src="images/pizza.jpg" alt="Pizza">
-                <h3>Pizza</h3>
-                <p>Cheesy, warm, and perfect after midnight.</p>
+
+                <div class="food-info">
+                    <h3>Cheesy Pizza</h3>
+                    <p>Crispy crust, melted cheese, and late-night perfection.</p>
+                </div>
             </div>
 
             <div class="food-card" data-message="Ramen chosen. Comfort level: maximum.">
                 <img src="images/ramen.jpg" alt="Ramen">
-                <h3>Ramen</h3>
-                <p>A cozy bowl for tired nights.</p>
+
+                <div class="food-info">
+                    <h3>Spicy Ramen</h3>
+                    <p>A cozy bowl for tired nights and dramatic moods.</p>
+                </div>
             </div>
 
             <div class="food-card" data-message="Dessert mode activated. No regrets.">
                 <img src="images/dessert.jpg" alt="Dessert">
-                <h3>Dessert</h3>
-                <p>Sweet cravings deserve attention.</p>
+
+                <div class="food-info">
+                    <h3>Chocolate Dessert</h3>
+                    <p>Sweet cravings deserve attention after midnight.</p>
+                </div>
             </div>
         </div>
 
@@ -67,8 +92,21 @@
     </section>
 
     <section id="mood" class="section mood-section">
-        <h2>Mood Pick</h2>
-        <p>Can’t decide what to eat? Let the website choose for you.</p>
+        <div class="section-title">
+            <p>Choose your mood</p>
+            <h2>What Are You Feeling?</h2>
+        </div>
+
+        <p class="mood-text">
+            Pick a mood and let Midnight Cravings recommend something for you.
+        </p>
+
+        <div class="mood-buttons">
+            <button class="mood-btn" data-food="You need warm ramen and a cold drink.">😴 Tired</button>
+            <button class="mood-btn" data-food="You need chocolate cake. Immediately.">😭 Sad</button>
+            <button class="mood-btn" data-food="You need pizza, fries, and no regrets.">😋 Hungry</button>
+            <button class="mood-btn" data-food="You need spicy noodles and something sweet after.">😤 Stressed</button>
+        </div>
 
         <button id="randomBtn" class="main-btn">Pick My Craving</button>
 
@@ -78,16 +116,30 @@
     </section>
 
     <section id="about" class="section about-section">
-        <h2>About This Project</h2>
-        <p>
-            This website was created as a static interactive project using
-            HTML, CSS, and JavaScript. It is hosted using GitHub Pages and will
-            later be connected to a custom domain with HTTPS.
-        </p>
+        <div class="about-content">
+            <h2>About This Project</h2>
+
+            <p>
+                Midnight Cravings is a static interactive website built using
+                HTML, CSS, and JavaScript. It demonstrates modern front-end design,
+                interactive features, GitHub Pages hosting, DNS configuration, and HTTPS setup.
+            </p>
+        </div>
     </section>
 
     <footer>
-        <p>© 2026 Midnight Cravings | Built with HTML, CSS & JavaScript</p>
+        <div class="footer-content">
+            <h3>Midnight Cravings</h3>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#foods">Foods</a>
+                <a href="#mood">Mood Picks</a>
+                <a href="#about">About</a>
+            </div>
+
+            <p>© 2026 Midnight Cravings | Built with HTML, CSS & JavaScript</p>
+        </div>
     </footer>
 
 </body>
