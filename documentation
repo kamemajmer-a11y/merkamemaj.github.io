@@ -1,0 +1,186 @@
+# Midnight Cravings Website Project Report
+
+## 1. Live Website URL
+
+**Live Website:**
+https://cithost.com
+
+**GitHub Pages URL:**
+https://merkamemaj.github.io
+
+---
+
+# 2. Project Overview
+
+For this project, I created a static interactive food website called **Midnight Cravings**. The purpose of the website is to recommend late-night food cravings such as pizza, ramen, and chocolate dessert. The website includes interactive JavaScript features such as:
+
+* Random craving generator
+* Mood-based food recommendations
+* Clickable food cards
+* Dark/light mode
+* “Add to Cravings” popup interaction
+
+The project was developed to practice website hosting, DNS configuration, GitHub Pages deployment, custom domains, and HTTPS setup.
+
+---
+
+# 3. Tools and Technologies Used
+
+The following tools and technologies were used during the project:
+
+* HTML
+* CSS
+* JavaScript
+* Visual Studio Code
+* GitHub
+* GitHub Desktop
+* GitHub Pages
+* Cloudflare Registrar
+* Cloudflare DNS
+
+No database was used because the website is fully static.
+
+---
+
+# 4. Website Development Process
+
+First, I created the project structure inside Visual Studio Code. The project included the following folders and files:
+
+```text
+index.html
+css/style.css
+js/script.js
+images/
+```
+
+The **HTML** file was used to create the website structure, including the navigation bar, hero section, food cards, mood section, about section, and footer.
+
+The **CSS** file was used to design the website layout, colors, responsive design, animations, buttons, and food cards.
+
+The **JavaScript** file was used to add interaction and functionality such as:
+
+* Theme toggle (dark/light mode)
+* Random craving generator
+* Mood recommendation buttons
+* Clickable food cards
+* Popup messages
+
+After developing the website locally, I uploaded the project to GitHub using GitHub Desktop.
+
+---
+
+# 5. GitHub Pages Setup
+
+After creating the GitHub repository, I enabled GitHub Pages from the repository settings.
+
+The configuration used was:
+
+```text
+Source: Deploy from a branch
+Branch: main
+Folder: /root
+```
+
+GitHub Pages then automatically published the website using the default GitHub Pages domain.
+
+---
+
+# 6. Custom Domain Setup
+
+To make the website look more professional, I purchased the custom domain:
+
+```text
+cithost.com
+```
+
+using Cloudflare Registrar.
+
+After purchasing the domain, I configured the DNS records in Cloudflare DNS so the domain would point to my GitHub Pages website.
+
+---
+
+# 7. DNS Configuration
+
+The following DNS records were added in Cloudflare DNS:
+
+```text
+Type: CNAME
+Name: @
+Target: merkamemaj.github.io
+Proxy status: DNS only
+```
+
+```text
+Type: CNAME
+Name: www
+Target: merkamemaj.github.io
+Proxy status: DNS only
+```
+
+These records connected the custom domain to GitHub Pages.
+
+### Screenshot to Include
+
+* Screenshot of Cloudflare DNS records
+
+---
+
+# 8. GitHub Custom Domain Configuration
+
+After configuring DNS, I returned to GitHub and added the custom domain inside:
+
+```text
+Repository → Settings → Pages → Custom Domain
+```
+
+The domain entered was:
+
+```text
+cithost.com
+```
+
+GitHub then verified the DNS records and connected the custom domain successfully.
+
+### Screenshot to Include
+
+* Screenshot of GitHub Pages custom domain settings
+
+---
+
+# 9. HTTPS / SSL Certificate
+
+Once the custom domain was connected correctly, GitHub automatically generated an HTTPS certificate for the website.
+
+The following option was enabled:
+
+```text
+Enforce HTTPS
+```
+
+This ensured that the website became securely accessible through:
+
+```text
+https://cithost.com
+```
+
+### Screenshot to Include
+
+* Screenshot showing HTTPS enabled or browser lock icon
+
+---
+
+# 10. Challenges Faced
+
+One challenge was connecting the local project files to GitHub correctly. Initially, I had issues pushing updates and syncing the repository. I solved this by using GitHub Desktop, which simplified committing and pushing files.
+
+Another challenge was DNS propagation and HTTPS activation. At first, GitHub Pages displayed a message saying the HTTPS certificate had not yet been issued. This problem was resolved by waiting for DNS propagation and refreshing GitHub Pages settings later.
+
+I also experienced issues with image paths and CSS file names. Some images did not load correctly because the file names in HTML did not exactly match the actual image names inside the images folder. I fixed this by correcting the image paths and ensuring the filenames matched exactly.
+
+---
+
+# 11. Conclusion
+
+This project helped me understand how a real website is developed, hosted, and connected to a custom domain. I learned how GitHub Pages works, how DNS records connect domains to websites, and how HTTPS secures website traffic.
+
+The final website is publicly accessible using a custom domain and HTTPS encryption, making it function similarly to a real deployed website.
