@@ -1,6 +1,16 @@
 const foodCards = document.querySelectorAll(".food-card");
 const foodMessage = document.getElementById("foodMessage");
 
+const modal = document.getElementById("foodModal");
+const closeModal = document.getElementById("closeModal");
+
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalRating = document.getElementById("modalRating");
+const modalDescription = document.getElementById("modalDescription");
+const modalCalories = document.getElementById("modalCalories");
+const modalIngredients = document.getElementById("modalIngredients");
+
 foodCards.forEach(function(card) {
     card.addEventListener("click", function() {
         const message = card.getAttribute("data-message");
@@ -12,7 +22,26 @@ foodCards.forEach(function(card) {
         });
 
         card.classList.add("clicked");
+
+        modalImage.src = card.getAttribute("data-image");
+        modalTitle.textContent = card.getAttribute("data-title");
+        modalRating.textContent = card.getAttribute("data-rating");
+        modalDescription.textContent = card.getAttribute("data-description");
+        modalCalories.textContent = card.getAttribute("data-calories");
+        modalIngredients.textContent = card.getAttribute("data-ingredients");
+
+        modal.classList.add("active");
     });
+});
+
+closeModal.addEventListener("click", function() {
+    modal.classList.remove("active");
+});
+
+modal.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        modal.classList.remove("active");
+    }
 });
 
 const randomBtn = document.getElementById("randomBtn");
@@ -55,7 +84,7 @@ moodButtons.forEach(function(button) {
 
 const themeBtn = document.getElementById("themeBtn");
 
-themeBtn.addEventListener("click", function () {
+themeBtn.addEventListener("click", function() {
     document.body.classList.toggle("light-mode");
 
     if (document.body.classList.contains("light-mode")) {
